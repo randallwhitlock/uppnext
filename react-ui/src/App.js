@@ -24,12 +24,13 @@ class App extends Component {
           message: json.message,
           fetching: false
         });
-      }).catch(e => {
+      })
+      .catch(e => {
         this.setState({
           message: `API call failed: ${e}`,
           fetching: false
         });
-      })
+      });
   }
 
   render() {
@@ -37,13 +38,14 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Welcome to React Yo</h2>
         </div>
         <p className="App-intro">
           {'This is '}
           <a href="https://github.com/mars/heroku-cra-node">
             {'create-react-app with a custom Node/Express server'}
-          </a><br/>
+          </a>
+          <br />
         </p>
         <p className="App-intro">
           {this.state.fetching
