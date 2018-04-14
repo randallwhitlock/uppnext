@@ -7,10 +7,12 @@
   },
   "scripts": {
     "start": "node server",
-    "heroku-postbuild":
-      "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
-  "cacheDirectories": ["node_modules", "react-ui/node_modules"],
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
   "dependencies": {
     "express": "^4.14.1"
   },
@@ -18,7 +20,12 @@
     "type": "git",
     "url": "https://github.com/mars/heroku-cra-node.git"
   },
-  "keywords": ["node", "heroku", "create-react-app", "react"],
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
   "license": "MIT",
   "devDependencies": {}
 }
