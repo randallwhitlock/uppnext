@@ -33,7 +33,9 @@
     "webpack-dev-server": "^3.1.2"
   },
   "scripts": {
-    "start": "npm-run-all --parallel open:client lift",
+    "start": "node app.js", //"npm-run-all --parallel open:client lift",
+    "heroku-postbuild":
+      "cd assets/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "webpack-dev-server --mode development --open",
     "build": "npm run build:prod",
@@ -46,7 +48,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/sails-react-webpack-4.git"
+    "url":
+      "git://github.com/anonymous node/sails user/sails-react-webpack-4.git"
   },
   "author": "anonymous node/sails user",
   "license": "",
