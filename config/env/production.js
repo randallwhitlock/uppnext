@@ -251,7 +251,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://ration.io',
+      'http://upnextsails.herokuapp.com',
     ],
 
 
