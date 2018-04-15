@@ -9,7 +9,7 @@
     "start": "node server",
     "heroku-postbuild":
       "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom "
   },
   "cacheDirectories": ["node_modules", "react-ui/node_modules"],
   "dependencies": {
