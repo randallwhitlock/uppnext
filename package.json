@@ -33,7 +33,7 @@
     "webpack-dev-server": "^3.1.2"
   },
   "scripts": {
-    "start": "npm mystart",
+    "start": "npm run mystart",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "webpack-dev-server --mode development --open",
     "build": "npm run build:prod",
