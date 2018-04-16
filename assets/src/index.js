@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyComp from './MyComp';
-const App = () => {
-  return (
-    <div>
-      <p>Simple Sails-React starter</p>
-      <MyComp />
-    </div>
-  );
-};
+import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+import 'semantic-ui-css/semantic.min.css';
+
+ReactDOM.render(
+
+<Router>
+  <App /> 
+</Router>,
+
+document.getElementById('root'));

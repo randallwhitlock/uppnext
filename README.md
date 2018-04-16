@@ -1,27 +1,81 @@
-# sails-react-webpack-4
+# UpNext
 
-a [Sails v1](https://sailsjs.com) application
+UpNext allows event organizers to provide realtime scheduling updates to event attendees. Organizers are able to schedule events using a web application. A sign-up link will be provided to attendees to sign up for realtime performance schedule updates. When a performance completes and the next one is queued, text messages or emails will be dispatched to inform subscribers.
 
+## Setup
 
-### Links
+### Prerequisites
 
-+ [Get started](https://sailsjs.com/get-started)
-+ [Sails framework documentation](https://sailsjs.com/documentation)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+What you'll need:
 
+* Twilio API key - In order to automate text messages to subscribers, you'll need to set up a Twilio account at https://twilio.com to receive an API key
+* Stripe API key - In order to receive payments from subscribers, you'll need to set up a Stripe account at https://stripe.com to retrieve an API key
 
-### Version info
+### Installing
 
-This app was originally generated on Sat Apr 07 2018 09:59:19 GMT-0600 (Hora estándar, América Central) using Sails v1.0.0.
+First, clone the repository from your terminal.
 
-<!-- Internally, Sails used [`sails-generate@1.15.19`](https://github.com/balderdashy/sails-generate/tree/v1.15.19/lib/core-generators/new). -->
+```bash
+git clone https://github.com/lambda-school-labs/seenmykid.git
+```
 
+Navigate in the local repo to the `server` directory, then install dependencies with yarn.
 
+```bash
+cd seenmykid/server
+yarn
+```
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+Run `yarn start` to start the server.
+Now move to the client directory and once again install dependencies.
 
+```bash
+cd ../client
+yarn
+```
+
+Now run `yarn start` to begin the development server. Browse to http://localhost:3000 to see changes you make to the application in realtime.
+
+### Running Automated Tests
+
+Testing will be done using Jest. Run tests using `yarn tests` in your terminal from the root of the project directory.
+
+```bash
+# This is an explanation of the following test, including what we are testing for.
+This is an example of a test.
+```
+
+## Deployment
+
+Project deployed using Heroku. Here are the steps needed to deploy the application.
+
+---
+
+**TODO:** Enter detailed instructions for deploying the app, including continuous integration techniques.
+
+---
+
+## Built With
+
+* [Node](https://nodejs.org/dist/v9.11.1/) - Development platform
+* [React](https://github.com/facebook/react) - JavaScript UI library
+* [Redux](https://github.com/reactjs/redux/tree/master/docs) - State management
+* [PostgreSQL](https://www.postgresql.org) - Persistent Storage
+* . . . and more to come
+
+## Authors
+
+The major contributors who brought this project to life:
+
+* John Pelley - [jryanp1](https://github.com/jryanp1)
+* Petrell Vereen - [darkness198](https://github.com/darkness198)
+* Raymond Rosario - [nomyard](https://github.com/nomyard)
+* Randall Whitlock - [randallwhitlock](https://github.com/randallwhitlock)
+
+## License
+
+This project's licensing has yet to be determined.
+
+## Acknowledgements
+
+We have some people to thank . . .

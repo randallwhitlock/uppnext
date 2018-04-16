@@ -18,7 +18,39 @@ module.exports = {
       {
         use: ['style-loader', 'css-loader'],
         test: /\.css$/
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
+      // {
+      //   test: /\.(png|woff|woff2|eot|ttf|svg|jpe?g)$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {}
+      //     }
+      //   ]
+      // }
     ]
   },
 
