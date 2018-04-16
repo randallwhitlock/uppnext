@@ -44,8 +44,8 @@ module.exports = {
      *                                                                          *
      ***************************************************************************/
     default: {
-      // adapter: 'sails-mysql',
-      // url: 'mysql://user:password@host:port/database',
+      adapter: 'sails-postgresql',
+      url: process.env.DATABASE_URL
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
@@ -165,8 +165,8 @@ module.exports = {
      * > (For a full list, see https://sailsjs.com/plugins/sessions)            *
      *                                                                          *
      ***************************************************************************/
-    // adapter: '@sailshq/connect-redis',
-    // url: 'redis://user:password@localhost:6379/dbname',
+    adapter: '@sailshq/connect-redis',
+    url: process.env.REDISTOGO_URL,
     //--------------------------------------------------------------------------
     // /\   OR, to avoid checking it in to version control, you might opt to
     // ||   set sensitive credentials like this using an environment variable.
@@ -272,7 +272,7 @@ module.exports = {
      * (the "max-age" to include in the "Cache-Control" response header)        *
      *                                                                          *
      ***************************************************************************/
-    cache: 365.25 * 24 * 60 * 60 * 1000 // One year
+    cache: 365.25 * 24 * 60 * 60 * 1000, // One year
 
     /***************************************************************************
      *                                                                          *
@@ -289,7 +289,7 @@ module.exports = {
      * (https://sailsjs.com/config/http)                                        *
      *                                                                          *
      ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true
   },
 
   /**************************************************************************
