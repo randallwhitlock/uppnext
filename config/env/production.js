@@ -44,7 +44,7 @@ module.exports = {
      *                                                                          *
      ***************************************************************************/
     default: {
-      adapter: require('sails-postgresql'),
+      adapter: 'sails-postgresql',
       url: process.env.DATABASE_URL
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
