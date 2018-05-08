@@ -39,9 +39,14 @@
     "dev": "NODE_ENV=development ./node_modules/sails/bin/sails.js lift",
     "start": "node app.js",
     "test:start": "NODE_ENV=test node app.js",
-    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/**/*.spec.js"
+    "test":
+      "NODE_ENV=test node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/**/*.spec.js"
   },
   "main": "app.js",
   "author": "Julian Claus <kontakt@julian-claus.de>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.10",
+    "npm": ">= 6.0.0"
+  }
 }
