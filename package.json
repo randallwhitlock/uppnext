@@ -10,7 +10,7 @@
       "git push && git push heroku `git subtree split --prefix backend master`:master --force",
     "start": "npm run mystart",
     "mystart": "cd backend && node app.js",
-    "heroku-prebuild": "npm run clean",
+
     "heroku-postbuild":
       " cd backend && rm -rf assets && npm install && cd ../frontend && npm install && npm run build "
   },
