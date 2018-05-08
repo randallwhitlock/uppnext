@@ -23,7 +23,7 @@
             <h1
             class="white--text mb-5 mt-5 display-3 text-xs-center"
             style="font-weight: 900; font-family: Lucida Console;">
-              <span style="text-shadow: 1px 1px 3px black;">Up</span><span style="color: gold;  text-shadow: 1px 1px 3px black;">Next</span>
+              <span style="text-shadow: 1px 1px 3px black;">Up</span><span style="color: gold;  text-shadow: 1px 1px 3px black;">NNext</span>
             </h1>
             <div
             class="white--text subheading mt-5 text-xs-center display-2"
