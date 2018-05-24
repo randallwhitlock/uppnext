@@ -2,7 +2,7 @@
 
   <v-layout justify-center>
     <v-flex xs8>
-      <v-toolbar color="yellow darken-1">
+      <v-toolbar style="background-color: #66BB6A; color: white;  font-family: Roboto; text-shadow: 1px 1px 2px black">
         <v-toolbar-title>Schedule</v-toolbar-title>
       </v-toolbar>
 
