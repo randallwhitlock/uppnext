@@ -36,6 +36,7 @@
     "sails.io.js": "^1.1.12",
     "sendgrid": "^5.2.3",
     "sinon": "^2.3.8",
+    "stripe": "^6.0.0",
     "supertest": "^3.0.0",
     "twilio": "^3.17.0"
   },
