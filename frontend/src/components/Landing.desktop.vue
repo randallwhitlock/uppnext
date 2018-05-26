@@ -61,7 +61,7 @@
         </v-parallax>
       </section>
       <section>
-        <stripe-payments id="checkout-button"></stripe-payments>
+        <!-- <stripe-payments id="checkout-button"></stripe-payments> -->
         <v-layout column wrap class="my-5" align-center>
           <v-flex xs12 sm4 class="my-3">
             <div class="text-xs-center">
@@ -176,7 +176,7 @@
 import SignUpModal from "./SignUpModal.desktop.vue";
 import LoginModal from "./LoginModal.desktop.vue";
 import LogoutModal from "./LogoutModal.desktop.vue";
-import StripePayments from "./StripePayments.vue";
+// import StripePayments from "./StripePayments.vue";
 
 export default {
   name: "App",
@@ -184,7 +184,7 @@ export default {
     SignUpModal,
     LoginModal,
     LogoutModal,
-    StripePayments
+    // StripePayments
   },
   data: function() {
     return {

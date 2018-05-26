@@ -71,6 +71,7 @@
         <v-btn @click="addSingleEvent" color="yellow darken-3">PROCEED TO CHECKOUT</v-btn>
       </v-flex>
     </v-layout>
+    <StripePayments>Proceed to checkout</StripePayments>
 
 
 
@@ -86,11 +87,13 @@
 import AddGroup from './AddGroup.desktop';
 import Schedule from './Schedule.desktop';
 import EventAddMixin from './AdminEventCreate.mixin'
+import StripePayments from './StripePayments'
 
 export default {
   components: {
     AddGroup,
-    Schedule
+    Schedule,
+    StripePayments
   },
   mixins: [EventAddMixin]
 };

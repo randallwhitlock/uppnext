@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button @click="checkout">Checkout</button>
+  <div id="button-container">
+    <button id="checkout-button" @click="checkout">Checkout</button>
   </div>
 </template>
 
@@ -21,4 +21,16 @@ export default {
   }
 };
 </script>
+<style>
+  #checkout-button {
+    background-color: gold;
+    padding: 1% 5%;
+    margin: auto;
+  }
+  #button-container {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+</style>
 
