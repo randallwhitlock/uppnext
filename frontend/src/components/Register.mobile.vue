@@ -10,28 +10,28 @@
 </template>
 
 <script>
-  import RegisterMixin from './Register.mixin'
-  import UserValidation from './User.validation'
+import RegisterMixin from "./Register.mixin";
+import UserValidation from "./User.validation";
 
-  export default {
-    mixins: [RegisterMixin, UserValidation],
+export default {
+  mixins: [RegisterMixin, UserValidation],
 
-    computed: {
-      isNameValidMobile: {
-        get () {
-          if (this.isNameValid) return 'success'
+  computed: {
+    isNameValidMobile: {
+      get() {
+        if (this.isNameValid) return "success";
 
-          return 'error'
-        }
-      },
+        return "error";
+      }
+    },
 
-      isPasswordValidMobile: {
-        get () {
-          if (this.isPasswordValid) return 'success'
+    isPasswordValidMobile: {
+      get() {
+        if (this.isPasswordValid) return "success";
 
-          return 'error'
-        }
+        return "error";
       }
     }
   }
+};
 </script>

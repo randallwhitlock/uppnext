@@ -5,30 +5,20 @@
 </template>
 
 <script>
-
 export default {
   methods: {
     checkout() {
       this.$checkout.open({
-        name: "Add Payment Details Below:",
+        name: "Enter Payment Details:",
         currency: "USD",
         amount: 9.99,
         token: token => {
           console.log(token);
-          console.log("This went through correctly");
+          console.log("This went through correctly**********************");
         }
       });
     }
-  },
-
+  }
 };
 </script>
 
-<style>
-  button {
-    padding: 10%;
-    background-color: gold;
-    box-shadow: 1px 1px 0 0;
-    color: black;
-  }
-</style>

@@ -41,11 +41,10 @@
   </v-app>
 </template>
 
+
 <script>
 //const axios = require('axios');
-
 import LoginMixin from './Login.mixin';
-
 export default {
   mixins: [LoginMixin],
   data: () => ({
