@@ -21,15 +21,6 @@
  */
 
 module.exports.routes = {
-  /***************************************************************************
-   *                                                                          *
-   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-   * etc. depending on your default view engine) your home page.              *
-   *                                                                          *
-   * (Alternatively, remove this and add an `index.html` file in your         *
-   * `assets` directory)                                                      *
-   *                                                                          *
-   ***************************************************************************/
 
   '/*': {
     controller: 'App',
@@ -40,11 +31,12 @@ module.exports.routes = {
 
   'post /api/help': 'help/Help.postHelp',
 
-  'post /api/register/post': 'Register.post',
+  'post /api/register': 'Register.post',
 
-  'post /api/login/post': 'LoginController.post',
+  'PUT /api/login': { action: 'entrance/login' },
+  'PUT /api/signup': { action: 'entrance/signup' },
 
-  'get /api/user/get': 'user/UserController.get',
+  'get /api/user': 'user/UserController.get',
 
   'get /api/products/get': 'products/ProductsController.getProducts',
 
