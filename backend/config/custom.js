@@ -24,11 +24,14 @@
   */
   sendgridDomain: '',
   sendgridSecret: '',
+
   // Sender used for outgoing autoemails 
   fromEmail: 'noreply@upnextapp.com',
   fromName: 'The UpNext Team',
+  
   // Email address for user support & other correspondence
   internalEmailAddress: 'randall.whitlock@live.com',
+  
   // require users to verify email
   verifyEmailAddresses: true,
 
@@ -44,8 +47,9 @@
 ************************* O ***********************************           
                           o'          
 */
-stripePublishableKey: 'pk_test_YwwFFUpskxZbjMNL5k12llgi',
-stripeSecret: 'sk_test_99G2nExhaGlqmIPbunQMl1h8',
+
+stripePublishableKey: '',
+stripeSecret: '',
 
 
 }
