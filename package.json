@@ -5,7 +5,6 @@
   "main": "backend/app.js",
   "scripts": {
     "dev": "cd backend && npm run dev & cd frontend && npm run dev",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "push": "git push && git push heroku `git subtree split --prefix backend master`:master --force",
     "start": "npm run mystart",
     "mystart": "cd backend && node app.js",
