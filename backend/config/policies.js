@@ -59,6 +59,14 @@ module.exports.policies = {
     '*': 'isAuthorized'
   },
 
+  'events/EventsController': {
+    '*': true
+  },
+
+  EventController: {
+    '*': 'isAdmin'
+  },
+
   'user/ProductsController': {
     '*': 'isAuthorized'
   },
