@@ -1,6 +1,6 @@
 module.exports = {
   post: (req, res) => {
-    const { name, password } = req.allParams();
+    const { name, password } = req.body;
 
     User.findOne({ name }).exec((error, user) => {
       if (error) return res.serverError(error);
