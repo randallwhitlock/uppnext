@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "description": "Product paradise",
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "async": "^2.6.0",
     "bcryptjs": "^2.3.0",
     "chai": "^4.1.0",
@@ -24,6 +25,7 @@
     "include-all": "^1.0.0",
     "jsonwebtoken": "^7.4.3",
     "lodash": "^4.17.10",
+    "machinepack-stripe": "^3.0.0",
     "mocha": "^3.4.2",
     "rc": "1.0.1",
     "sails": "^1.0.0-45",
@@ -33,8 +35,10 @@
     "sails-hook-sockets": "^0.13.11",
     "sails-postgresql": "^1.0.1",
     "sails.io.js": "^1.1.12",
+    "sendgrid": "^5.2.3",
     "sinon": "^2.3.8",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "twilio": "^3.17.0"
   },
   "scripts": {
     "checkout": "NODE_PATH=. node ./node_modules/git-checkout.js/src/index.js",
