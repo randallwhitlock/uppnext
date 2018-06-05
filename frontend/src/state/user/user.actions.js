@@ -13,23 +13,27 @@ export default {
     })
   },
 
-  postUser (context, {name, password}) {
+  postUser (context, {email, fullName, password}) {
     return new Promise((resolve, reject) => {
       Vue.http
-        .post('/api/register/post', {name, password})
-        .then(() => {
-          context.commit('RESET_USER')
-          resolve()
-        })
+      .post('/api/signup/post', {
+        email,
+        fullName,
+        password
+      })
+      .then(response => {
+        context.commit('SET_IS_USER_AUTHENTICATED', true)
+        resolve(response.body)
+      })
         .catch(error => reject(error))
     })
   },
 
-  loginUser (context, {name, password}) {
+  loginUser (context, {email, password}) {
     return new Promise((resolve, reject) => {
       Vue.http
         .post('/api/login/post', {
-          name,
+          email,
           password
         })
         .then(response => {
@@ -37,6 +41,23 @@ export default {
           resolve(response.body)
         })
         .catch(error => reject(error))
+    })
+  },
+
+  updateSettings (context, {email, phone, receiveTexts, receiveEmails}) {
+    return new Promise((resolve, reject) => {
+      Vue.http
+        .put('/api/user/put', {
+          email,
+          phone,
+          receiveEmails,
+          receiveTexts
+        })
+        .then(response => {
+          context.commit('SET_RECEIVED_RESPONSE', true)
+          resolve(response.body)
+        })
+        .catch(err => reject(err))
     })
   }
 }

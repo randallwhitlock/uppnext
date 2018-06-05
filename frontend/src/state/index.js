@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import user from './user/user.module'
-import product from './product/product.module'
-import products from './products/products.module'
-import basket from './basket/basket.module'
-
+import events from './events/events.module'
+import groups from './groups/groups.module'
 Vue.use(Vuex)
 
 const getCookie = name => {
@@ -15,20 +13,24 @@ const getCookie = name => {
 export default new Vuex.Store({
   modules: {
     User: user,
-    Product: product,
-    Products: products,
-    Basket: basket
+    Events: events,
+    Groups: groups
   },
 
   state: {
     locale: 'en',
-    isUserAuthenticated: !!(getCookie('user')),
+    isUserAuthenticated: !!getCookie('user'),
+    isAdmin: !!getCookie('isAdmin'),
     isHelpVisible: false
   },
 
   mutations: {
     SET_IS_USER_AUTHENTICATED (state, isUserAuthenticated) {
       state.isUserAuthenticated = isUserAuthenticated
+    },
+
+    SET_IS_ADMIN (state, isAdmin) {
+      state.isAdmin = isAdmin
     },
 
     SET_LOCALE (state, locale) {
