@@ -5,7 +5,8 @@
         <v-btn
         slot="activator"
         text="View Events"
-        style="overflow:hidden; background-color: #0182E7; color: white; text-shadow: 1px 1px 2px black; padding: 10px; margin: 10px"
+        class="viewEventsButton"
+        style="background-color: #0182e7; color: white;"
         light>View Events
         </v-btn>
       </v-dialog>
@@ -20,3 +21,15 @@ export default {
   data: () => ({
   })
 };
+</script>
+
+<style scoped>
+.viewEventsButton {
+  overflow:hidden; 
+  background-color: #0182E7; 
+  color: white; 
+  text-shadow: 1px 1px 2px black; 
+  margin: 10px
+}
+
+</style>

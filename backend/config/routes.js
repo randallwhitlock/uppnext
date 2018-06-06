@@ -42,9 +42,7 @@ module.exports.routes = {
 
   'post /api/login/post': 'LoginController.post',
 
-  'get /api/user/get': 'user/UserController.get',
-
-  'post /api/user/post': 'user/UserController.updateNotificationSettings',
+  'post /api/user/updatepassword': 'user/UserController.updatePassword',
 
   /***************************************************************************/
   /**                                ADDED                                  **/
