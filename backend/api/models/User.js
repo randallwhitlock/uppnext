@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
   attributes: {
-    fullName: {
+    name: {
       description: 'The full name of the user',
       type: 'string',
       required: true
@@ -22,7 +22,7 @@ module.exports = {
       type: 'boolean',
       required: false
     },
-    phone: {
+    phoneNumber: {
       description: 'Phone number on which user can receive text notifications',
       type: 'string',
       required: false

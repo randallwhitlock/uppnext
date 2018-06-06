@@ -4,9 +4,9 @@ export default {
     state.user = user
   },
 
-  SET_USER_NAME (state, fullName) {
+  SET_USER_NAME (state, name) {
     console.log('in mutations name ' + name)
-    state.user.fullName = fullName
+    state.user.name = name
   },
 
   SET_USER_EMAIL (state, email) {
@@ -24,16 +24,16 @@ export default {
     state.user.password = ''
   },
 
-  SET_USER_PHONE (state, phone) {
+  SET_USER_PHONE (state, phoneNumber) {
     console.log('The phone number has just been set')
-    state.user.phone = phone
+    state.user.phoneNumber = phoneNumber
   },
 
-  SET_EMAIL_NOTIFICATIONS (state, bool) {
-    state.user.receiveEmails = bool
+  SET_EMAIL_NOTIFICATIONS (state, receiveEmailNotifications) {
+    state.user.receiveEmails = !state.user.receiveEmails
   },
 
   SET_TEXT_NOTIFICATIONS (state, bool) {
-    state.user.receiveTexts = bool
+    state.user.receiveTexts = !state.user.receiveTexts
   }
 }

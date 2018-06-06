@@ -29,13 +29,13 @@ export default {
       }
     },
 
-    fullName: {
+    name: {
       get () {
-        return this.$store.state.User.user.fullName
+        return this.$store.state.User.user.name
       },
 
-      set (fullName) {
-        this.$store.commit('SET_USER_NAME', fullName)
+      set (name) {
+        this.$store.commit('SET_USER_NAME', name)
       }
     },
 
@@ -47,14 +47,25 @@ export default {
       set (password) {
         this.$store.commit('SET_USER_PASSWORD', password)
       }
+    },
+
+    phoneNumber: {
+      get () {
+        return this.$store.state.User.user.phoneNumber
+      },
+
+      set (phoneNumber) {
+        this.$store.commit('SET_USER_PHONE_NUMBER', phoneNumber)
+      }
     }
   },
   methods: {
     async signup () {
       const user = {
         email: this.email,
-        fullName: this.fullName,
-        password: this.password
+        name: this.name,
+        password: this.password,
+        phoneNumber: this.phoneNumber
       }
       const result = await this.$store.dispatch('postUser', user)
       const { token, cookie } = result
